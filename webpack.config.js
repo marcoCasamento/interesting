@@ -1,17 +1,10 @@
-var path = require("path");
+const path = require("path");
 
-var config = {
-  /*
-   * app.ts represents the entry point to your web application. Webpack will
-   * recursively go through every "require" statement in app.ts and
-   * efficiently build out the application's dependency tree.
-   */
+const config = {
+  // Client app entry (single page)
   entry: ["./src/app.tsx"],
 
-  /*
-   * The combination of path and filename tells Webpack what name to give to
-   * the final bundled JavaScript file and where to store this file.
-   */
+  // path and name of the bundle
   output: {
     path: path.resolve(__dirname, "build"),
     filename: "bundle.js"
