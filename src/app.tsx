@@ -1,8 +1,8 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
-import {Hello, MainInput} from "./int_module";
+import MainInput  from "./MainInput";
 
 ReactDOM.render(
-  <MainInput name="Marco" />,
+  <MainInput mainText="Marco" />,
   document.getElementById("root")
 );

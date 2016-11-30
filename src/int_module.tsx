@@ -1,26 +1,14 @@
-import * as React from 'react';
+import * as React from "react";
 
-interface HelloProps {
+interface IHelloProps {
   name: string;
 }
 
-class Hello extends React.Component<HelloProps, {}> {
-  render() {
-    return <div>Hello, {this.props.name}! Please insert the basic facts</div>;
+class Hello extends React.Component<IHelloProps, {}> {
+  public render() {
+    return <div>Hello, {this.props.name}. Please insert the basic facts</div>;
   }
 }
 
-interface MainInputProps {
-  mainText: string;
-}
 
-class MainInput extends React.Component<MainInputProps, {}> {
-  render() {
-    return <div id="">
-      <Hello/>
-      <input />
-    </div>
-  }
-}
-
-export {Hello, MainInput};
+export default Hello;
