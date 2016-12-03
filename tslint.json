@@ -2,8 +2,8 @@
   "extends": "tslint:latest",
   
   "rules": {
-    "no-unused-variable": [
-      true
+    "trailing-comma": [
+      "disallow"
     ]
   }
 }

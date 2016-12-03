@@ -4,7 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "build:client": "webpack",
+    "build:client": "webpack --watch",
     "build:live": "nodemon --exec ts-node .\\src\\server.ts",
     "start": "npm run build:client & npm run build:live"
   },
@@ -12,6 +12,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "mocha": "^3.2.0",
     "nodemon": "^1.11.0",
     "ts-loader": "^1.2.2",
     "ts-node": "^1.7.0",
