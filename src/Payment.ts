@@ -1,44 +1,43 @@
 export default class Payment {
+  private date: Date = new Date(0);
+  private capital: number = 0.0;
+  private interest: number = 0.0;
+
   /*
    * Create a new instance of Payment
    */
-  constructor(date: Date, amount: number, capital: number, interest: number) {
-    this._Date = date;
-    this._Amount = amount;
-    this._Capital = capital;
-    this._Interest = interest;
+  constructor(date: Date, capital: number) {
+    this.date = date;
+    this.capital = capital;
   }
-  private _Date: Date;
+
   public get Date(): Date {
-    return this._Date;
+    return this.date;
   }
-  public set Date(v: Date) {
-    this._Date = v;
+  public set Date(value: Date) {
+    this.date = value;
   }
-  private _Amount: number;
+
   public get Amount(): number {
-    return this._Amount;
+    return this.capital + this.interest;
   }
-  public set Amount(v: number) {
-    this._Amount = v;
-  }
-  private _Capital: number;
+
   public get Capital(): number {
-    return this._Capital;
+    return this.capital;
   }
   public set Capital(value: number) {
-    this._Capital = value;
+    this.capital = value;
   }
 
-  private _Interest: number;
   public get Interest(): number {
-    return this._Interest;
+    return this.interest;
   }
   public set Interest(value: number) {
-    this._Interest = value;
+    this.interest = value;
   }
 
-  toString() {
-    return `Payment date ${this._Date.toLocaleDateString()}\n\tAmount: ${this._Amount.toFixed(2)}\n\tCapital: ${this._Capital.toFixed(2)}\n\tInterest: ${this.Interest.toFixed(2)}`;
+  public toString() {
+    return `Payment date ${this.date.toLocaleDateString()} Amount: ` +
+      `${this.Amount.toFixed(2)} Capital: ${this.capital.toFixed(2)} Interest: ${this.interest.toFixed(2)}`;
   }
 }

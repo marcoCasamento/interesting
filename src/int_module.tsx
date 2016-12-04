@@ -10,5 +10,4 @@ class Hello extends React.Component<IHelloProps, {}> {
   }
 }
 
-
 export default Hello;

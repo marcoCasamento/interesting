@@ -4,9 +4,12 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "build:client": "webpack --watch",
-    "build:live": "nodemon --exec ts-node .\\src\\server.ts",
-    "start": "npm run build:client & npm run build:live"
+    "build:client:live": "webpack --watch",
+    "build:server:live": "nodemon --exec ts-node .\\src\\server.ts",
+    "lint": "tslint",
+    "build": "tsc",
+    "test:live": "mocha .\\build\\tests --watch",
+    "test": "mocha .\\build\\tests"
   },
   "keywords": [],
   "author": "",

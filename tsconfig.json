@@ -8,7 +8,7 @@
         "outDir": "./build/",
         "preserveConstEnums": true,
         "removeComments": true,
-        "sourceMap": false,
+        "sourceMap": true,
         "noUnusedLocals": true
     },
 
